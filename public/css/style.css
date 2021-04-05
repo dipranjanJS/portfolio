@@ -1,0 +1,120 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.hero-banner {
+    background-image: url("/images/hero-min.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content {
+    position: absolute;
+    color: white;
+    transform: translate(-50%, 50%);
+    left: 50%;
+    text-align: center;
+}
+.content h4 {
+    line-height: 2;
+}
+.welcome-container {
+    min-height: 80vh;
+}
+.resume {
+    border: 1px solid;
+    padding: 5px;
+    background: black;
+    color: white;
+}
+.resume:hover, .resume:focus {
+    text-decoration: none;
+}
+.title {
+    text-align: center;
+}
+.tech-names {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+}
+.tech-names p {
+    border: 1px solid transparent;
+    background: #d8cbcb;
+    padding: 10px;
+    box-shadow: 5px 0px 8px #888888;
+    margin-right: 25px;
+}
+.tech-names p:hover {
+    box-shadow: 5px 10px 8px #888888;
+}
+.projects {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.project-container {
+    width: 320px;
+    padding: 10px;
+    background: whitesmoke;
+    box-shadow: 5px 10px 5px #ccc;
+    margin-bottom: 20px;
+}
+.project-img img {
+    width: 100%;
+}
+.project-details h5 {
+    font-weight: bold;
+}
+.project-details p {
+    color: darkcyan;
+}
+.view {
+    display: block;
+    width: 25%;
+    text-align: center;
+    margin: 0 auto;
+}
+.footer-container {
+    bottom: 0;
+    background: black;
+    color: white;
+    width: 100%;
+    padding: 15px;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.copyright {
+    text-align: center;
+}
+
+.contact-details {
+    text-align: center;
+}
+.contact-details img {
+    width: 25px
+}
+
+.linkedin-img {
+    margin-top: 4px;
+}
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;
+    }
+    .navbar-header {
+        margin-left: 20px;
+    }
+    .navbar-nav {
+        width: 50%;
+        float: right;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jQuery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header.ejs') %> 
+    <div id="home" class="hero-banner">
+        <div class="welcome-container">
+            <div class="content">
+                <h1>Hello there</h1>
+                <h3>My name is Dipranjan Das</h3>
+                <h4>I am a fullstack web developer with experience in cutting edge tools and technologies.</h4>
+                <a class="resume" href="resume/Resume.pdf" download>Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="technology" class="technology">
+        <h2 class="title">Technology</h2>
+        <div class="tech-names">
+            <% technologies.forEach(tech => { %>
+                <p> <%= tech %> </p>
+            <% }) %>
+        </div>        
+    </section>
+
+    <section id="projects">
+        <h2 class="title">Projects</h2>
+        <div class="projects">
+            <% projects.forEach(({name, img, text, link}) => { %>
+                <div class="project-container">
+                    <div class="project-img">
+                        <img src=<%= img %> alt =<%= name %> />
+                    </div>
+                    <div class="project-details">
+                        <h5> <%= name %> </h5>
+                        <p> <%= text %> </p>
+                        <a class="resume view" href=<%= link %> >View</a>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
