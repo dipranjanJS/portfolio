@@ -7,6 +7,9 @@ body {
 }
 .navbar {
     margin-bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 .hero-banner {
     background-image: url("/images/hero-min.jpg");
@@ -28,10 +31,11 @@ body {
     min-height: 80vh;
 }
 .resume {
-    border: 1px solid;
-    padding: 5px;
-    background: black;
-    color: white;
+    border: 1px solid transparent;
+    padding: 9px;
+    background: white;
+    color: black;
+    border-radius: 11px;
 }
 .resume:hover, .resume:focus {
     text-decoration: none;
@@ -55,19 +59,23 @@ body {
     box-shadow: 5px 10px 8px #888888;
 }
 .projects {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     padding: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 7%;
 }
 .project-container {
     width: 320px;
-    padding: 10px;
+    padding: 10px 25px;
     background: whitesmoke;
-    box-shadow: 5px 10px 5px #ccc;
+    box-shadow: 5px 10px 5px #e6dfdf;
     margin-bottom: 20px;
+    background: #e6dfdf;
 }
 .project-img img {
     width: 100%;
+    max-height: 130px;
+    object-fit: contain;
 }
 .project-details h5 {
     font-weight: bold;
@@ -80,6 +88,11 @@ body {
     width: 25%;
     text-align: center;
     margin: 0 auto;
+    box-shadow: 1px 3px 15px;
+}
+.view:active {
+    box-shadow: 0px 0px 0px;
+    transform: translate(0, 4px);
 }
 .footer-container {
     bottom: 0;
@@ -106,6 +119,51 @@ body {
 .linkedin-img {
     margin-top: 4px;
 }
+
+@media (max-width: 767px) {
+    .projects {
+        display: grid;
+        grid-row-gap: 25px;
+        grid-template-columns: 1fr;
+        margin-left: 0;
+    }
+    .project-container {
+        width: auto;
+        margin-bottom: 0;
+        box-shadow: 0px 10px 6px #b7b0b0;
+        padding: 10px 25px 20px;
+    }
+    .tech-names {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 15px;
+    }
+    .tech-names p {
+        text-align: center;
+        margin-right: 0;
+    }
+    .welcome-container {
+        min-height: 50vh;
+    }
+    .content {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .content h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+    .content h3 {
+        font-size: 15px;
+        margin-top: 8px;
+    }
+    .footer-wrapper {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (min-width: 768px) {
     .navbar {
         border-radius: 0;
