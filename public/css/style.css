@@ -24,6 +24,29 @@ body {
     left: 50%;
     text-align: center;
 }
+.content h1 {
+    animation: hello 2s 1;
+    margin-bottom: 20px;
+}
+.content h3 {
+    margin: 0;
+}
+
+@keyframes hello {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.5;
+        letter-spacing: 15px;
+    }
+    85% {
+        opacity: 1;
+        letter-spacing: normal;
+
+    }
+}
+
 .content h4 {
     line-height: 2;
 }
@@ -43,6 +66,25 @@ body {
 .title {
     text-align: center;
 }
+.about-container {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+.about-container .my-img {
+    max-width: 250px;
+    margin-right: 20%;
+}
+.about-container .my-img img {
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 13px 13px 10px;
+    
+}
+.about-text {
+    flex-basis: 35%;
+    margin-left: 17%;
+}
 .tech-names {
     display: flex;
     padding: 15px;
@@ -50,7 +92,7 @@ body {
 }
 .tech-names p {
     border: 1px solid transparent;
-    background: #d8cbcb;
+    background: #e2dbd1;
     padding: 10px;
     box-shadow: 5px 0px 8px #888888;
     margin-right: 25px;
@@ -70,7 +112,7 @@ body {
     background: whitesmoke;
     box-shadow: 5px 10px 5px #e6dfdf;
     margin-bottom: 20px;
-    background: #e6dfdf;
+    background: #e2dbd1;
 }
 .project-img img {
     width: 100%;
@@ -133,6 +175,23 @@ body {
         box-shadow: 0px 10px 6px #b7b0b0;
         padding: 10px 25px 20px;
     }
+    .about-container {
+        margin-top: 15px;
+    }
+    .about-text {
+        margin-left: 0;
+        flex-basis: auto;
+        padding-left: 20px;
+    }
+    .about-container .my-img {
+        max-width: 120px;
+        margin-right: 22px;
+    }
+    .about-container .my-img img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: none;
+    }
     .tech-names {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -143,19 +202,24 @@ body {
         margin-right: 0;
     }
     .welcome-container {
-        min-height: 50vh;
+        min-height: 45vh;
     }
     .content {
         width: 100%;
         padding: 0 15px;
+        transform: translate(-50%, 60%);
     }
     .content h1 {
         font-size: 24px;
         margin: 0;
     }
     .content h3 {
-        font-size: 15px;
+        font-size: 16px;
         margin-top: 8px;
+    }
+    .content h4 {
+        font-size: 14px;
+        margin-bottom: 20px;
     }
     .footer-wrapper {
         text-align: center;
